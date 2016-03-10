@@ -11,7 +11,7 @@
   <access origin="*"/>
   <allow-intent href="*"/>
   <allow-navigation href="*"/>
-  <preference name="phonegap-version" value="4.0.0" />
+  <preference name="phonegap-version" value="3.7.0" />
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -22,6 +22,7 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
