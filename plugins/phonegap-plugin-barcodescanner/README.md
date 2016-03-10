@@ -3,8 +3,6 @@
 
 [![Build Status](https://travis-ci.org/phonegap/phonegap-plugin-barcodescanner.svg)](https://travis-ci.org/phonegap/phonegap-plugin-barcodescanner)
 
-**Note: This repository is no longer maintained. The official repository is now at [phonegap/phonegap-plugin-barcodescanner](http://github.com/phonegap/phonegap-plugin-barcodescanner).**
-
 Cross-platform BarcodeScanner for Cordova / PhoneGap.
 
 Follows the [Cordova Plugin spec](http://cordova.apache.org/docs/en/5.0.0/plugin_ref_spec.md), so that it works with [Plugman](https://github.com/apache/cordova-plugman).
@@ -28,7 +26,7 @@ It is also possible to install via repo url directly ( unstable )
 
 - Android
 - iOS
-- Windows 8
+- Windows (Windows/Windows Phone 8.1 and Windows 10)
 - Windows Phone 8
 - BlackBerry 10
 - Browser
@@ -37,6 +35,12 @@ Note: the Android source for this project includes an Android Library Project.
 plugman currently doesn't support Library Project refs, so its been
 prebuilt as a jar library. Any updates to the Library Project should be
 committed with an updated jar.
+
+Note: Windows 10 applications can not be build for `AnyCPU` architecture, which is default for Windows platform. If you want to build/run Windows 10 app, you should specify target architecture explicitly, for example (Cordova CLI):
+
+```
+cordova run windows -- --archs=x86
+```
 
 ## Using the plugin ##
 The plugin creates the object `cordova/plugin/BarcodeScanner` with the method `scan(success, fail)`. 
@@ -71,7 +75,7 @@ The following barcode types are currently supported:
 * CODE_39
 * ITF
 
-### Windows8
+### Windows
 
 * UPC_A
 * UPC_E
@@ -157,8 +161,8 @@ A full example could be:
         );
 ```
 
-## Windows8 quirks ##
-Windows 8 implementation currently doesn't support encode functionality.
+## Windows quirks ##
+Windows implementation currently doesn't support encode functionality.
 
 ## Windows Phone 8 quirks ##
 Windows Phone 8 implementation currently doesn't support encode functionality.
