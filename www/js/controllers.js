@@ -122,7 +122,7 @@ angular.module('controllers', [])
         }).error(function(error, status){
           $ionicPopup.alert({
             title: 'Error',
-            content: "al canjear el cupon"
+            content: barcodeData.text
           });
         });
       }, function(error) {
