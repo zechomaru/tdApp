@@ -21,10 +21,6 @@
   <feature name="SplashScreen">
     <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
 </feature>
-  <preference name="AutoHideSplashScreen" value="false" />
-  <preference name="auto-hide-splash-screen" value="false" />
-  <preference name="splashscreen" value="splash" />
-<preference name="splashScreenDelay" value="10000" />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
@@ -49,4 +45,8 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+
+  <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="SplashScreenDelay" value="5000" />
 </widget>
