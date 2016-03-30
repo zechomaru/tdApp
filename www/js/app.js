@@ -1,6 +1,12 @@
 angular.module('app', ['ngCordova','ionic', 'controllers'])
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $interval, $window) {
   $ionicPlatform.ready(function() {
+      $interval( function($window) {
+        localStorage.removeItem('id');
+        // console.log("salio");
+
+        }, 60000 * 20)
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
