@@ -1,11 +1,13 @@
 angular.module('app', ['ngCordova','ionic', 'controllers'])
-.run(function($ionicPlatform, $interval, $window) {
+.run(function($ionicPlatform, $interval, $window, $state) {
   $ionicPlatform.ready(function() {
       $interval( function($window) {
         localStorage.removeItem('id');
+        $state.go('signin');
+        ionic.Platform.exitApp();
         // console.log("salio");
 
-        }, 60000 * 20)
+        }, 60000 * 1)
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
