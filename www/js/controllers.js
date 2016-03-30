@@ -101,7 +101,7 @@ angular.module('controllers', [])
   $scope.scanBarcode = function() {
     $cordovaBarcodeScanner.scan()
       .then(function(barcodeData) {
-        $http.patch("http://tudescuenton.com:8888/apibiz/coupons/qr/" + barcodeData.text +"/" + localStorage['id'],{
+        $http.patch("http://tudescuenton.com:8888/apibiz/coupons/qr/" + barcodeData.text +"/" + $window.localStorage['id'],{
         }).success(function(data, status){
           $ionicPopup.alert({
             title: 'Correct',
@@ -122,7 +122,7 @@ angular.module('controllers', [])
         }).error(function(error, status){
           $ionicPopup.alert({
             title: 'Error',
-            content: 'Cupon no valido'
+            content: "al canjear el cupon"
           });
         });
       }, function(error) {
